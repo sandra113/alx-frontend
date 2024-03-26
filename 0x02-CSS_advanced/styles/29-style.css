@@ -77,20 +77,6 @@ html {
     font-size: 62.5%;
 }
 
-.header {
-    padding: var(--header-padding);
-}
-
-.header-logo {
-    position: var(--header-logo-position);
-}
-
-.header-logo a {
-    display: var(--header-logo-link-display);
-    position: var(--header-logo-link-position);
-    top: var(--header-logo-link-top);
-    left: var(--header-logo-link-left);
-}
 body {
     color: var(--text-color);
     font-family: var(--font-family-base);
@@ -166,22 +152,37 @@ a:active {
 }
 
 .nav .nav-link::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     background-color: var(--color-white);
     width: 0;
-    height: 20%;
+    height: 0.2rem;
 }
 
-nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-white);
+.nav .nav-item:hover > .nav-link::before{
+    background-color: var(--color-primary);
     width: 100%;
 }
 
 .visually-hidden {
     display: none;
+}
+
+.header {
+    padding: var(--header-padding);
+}
+
+.header-logo {
+    position: var(--header-logo-position);
+}
+
+.header-logo a {
+    display: var(--header-logo-link-display);
+    position: var(--header-logo-link-position);
+    top: var(--header-logo-link-top);
+    left: var(--header-logo-link-left);
 }
 
 .card-category {
@@ -286,7 +287,7 @@ ul.row {
 }
 
 .row::after {
-    content: none;
+    content: "";
     display: table;
     clear: both;
 }
