@@ -1,4 +1,4 @@
-/* Advanced CSS */
+/* add background and hover state to services */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 /*# sourceMappingURL=normalize.min.css.map */
@@ -37,6 +37,7 @@
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --section-tagline-margin: 0;
+
     --footer-padding: 5rem 0 1rem;
 
     --nav-item-font-family: var(--font-family-title);
@@ -125,21 +126,21 @@ a:active {
 .card-category {
     color: var(--color-primary);
 }
-.card-sevices .card-title{
+
+.card-services .card-title {
     margin: 0;
 }
 
-.card-sevices .a{
+.card-services a {
     display: block;
     padding: 2rem;
     background-color: var(--color-light-grey);
-
 }
 
 .card-services a:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 .section {
@@ -175,20 +176,18 @@ a:active {
     font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
 }
-ul.row{
+
+ul.row {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.col-1-3{
+
+.col-1-3 {
     width: 33.33%;
 }
-.col-1-2{
+
+.col-1-2 {
     width: 50%;
 }
 
@@ -196,16 +195,17 @@ ul.row{
     float: left;
     padding: 0.5rem;
 }
-.container {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+
+.row::after {
+    content: none;
+    display: table;
+    clear: both;
 }
 
-[data-section-theme='dark']{
+[data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
-    background-color: var(--color-white);
+    background-color: var(--color-black);
 }
 
 .social-link {
@@ -216,20 +216,26 @@ ul.row{
     fill: var(--text-color);
 }
 
-
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
 }
 
-.footer ul{
+.footer ul {
     text-align: right;
+}
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    padding: var(--footer-padding);
 }
 
 .footer-address {
     color: var(--text-color);
-}
-.footer {
-    padding: var(--footer-padding);
 }
