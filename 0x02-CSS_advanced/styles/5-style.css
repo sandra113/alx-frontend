@@ -1,5 +1,6 @@
 /*Advanced html*/
 
+
 :root{
     --color-primary: #d73953;
     --color-black: #090909;
@@ -15,17 +16,16 @@
     --font-size-x-large: 2.3rem;
     --font-size-xx-large: 4.8rem;
 
-    /* Set font size for html element to 62.5% */
-    font-size: 62.5%;
 
-    /* Custom font-family properties */
-    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     /* Custom font-family properties */
+     --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
